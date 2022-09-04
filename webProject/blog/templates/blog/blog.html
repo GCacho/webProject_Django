@@ -27,7 +27,7 @@
         <div class="container text-center text-light">
             <h1>Categorías:</h1>
                 {% for categoria in categorias %}
-                    <a href="{% url 'categorias' categoria.id %}">{{categoria.nombre}}</a> &nbsp;
+                    <a href="{% url 'categorias' categoria.id %}" class="linksCategorias">{{categoria.nombre}}</a> &nbsp;
                 {% endfor %}
             <!-- Para mas info: https://youtu.be/sTRm5YA7Hdk-->
         </div>
