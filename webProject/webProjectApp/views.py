@@ -5,6 +5,3 @@ def home(request):
 
 def tienda(request):
     return render(request,"webProjectApp/tienda.html")
-
-def contacto(request):
-    return render(request,"webProjectApp/contacto.html")
