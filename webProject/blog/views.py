@@ -12,4 +12,4 @@ def blog(request):
 def categoria(request, categoria_id):
     categoria = Categoria.objects.get(id=categoria_id)
     posts=Post.objects.filter(categorias=categoria) # Apunta a categorias del modelo
-    return render(request, "blog/categorias.html", {"posts":posts, 'categoria':categoria})
+    return render(request, "blog/categorias.html", {"posts":posts, 'categorias':categoria})
