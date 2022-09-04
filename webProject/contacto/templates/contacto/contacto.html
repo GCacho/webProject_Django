@@ -1,7 +1,14 @@
 {% extends 'webProjectApp/base.html' %}
 {% load static %}
 {% block content %}
-
-    <h1>Contacto GOD</h1>
-
+    <div class="contenedorFormulario">
+        {% if "valido" in request.GET %} <!-- Para mas info: https://youtu.be/_BOOv6GK-68 -->
+            <p style="color:white;">Información enviada correctamente, gracias</p>
+        {% endif %}
+        <form action="" method="POST" style="text-align:center;">
+            {% csrf_token %} <!-- Para mas info: https://youtu.be/xbZyPLSrqPc -->
+            <table style="color:white; margin:20px auto">{{miFormulario.as_table}}</table>
+            <input type="submit" value="Enviar" style="width:150px;">
+        </form>
+    </div>
 {% endblock %}
