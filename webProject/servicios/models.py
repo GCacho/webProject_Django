@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from email.headerregistry import ContentDispositionHeader
 from enum import auto
 from django.db import models
@@ -7,7 +8,7 @@ from django.db import models
 class Servicio(models.Model):
     titulo = models.CharField(max_length=50)
     contenido = models.CharField(max_length=50)
-    imagen = models.ImageField()
+    imagen = models.ImageField(upload_to='servicios') # Para mas info: https://youtu.be/kBsj5xLuuoY
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now_add=True)
 

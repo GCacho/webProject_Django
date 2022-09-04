@@ -36,6 +36,20 @@ ___
 ~~~
     - python3 manage.py runserver
 ~~~
+- Crear SuperUsuario
+~~~
+    - python3 manage.py createsuperuser
+~~~
+- Hacer migraciones de modelos a base de datos
+~~~
+    - python3 manage.py makemigrations
+    - python3 manage.py sqlmigrate orders 0001 (por si aparece un error)
+    - python3 manage.py migrate
+~~~
+- Ingresar a la Shell
+~~~
+    - python3 manage.py shell
+~~~
 ___
 ### Comandos PostgreSQL
 - Correr y Verificar Servicio PostgreSQL
