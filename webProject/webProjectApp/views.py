@@ -6,10 +6,5 @@ def home(request):
 def tienda(request):
     return render(request,"webProjectApp/tienda.html")
 
-
-def blog(request):
-    return render(request,"webProjectApp/blog.html")
-
-
 def contacto(request):
     return render(request,"webProjectApp/contacto.html")
