@@ -10,7 +10,7 @@ ___
     - python3 -m pip install --upgrade pip
     - sudo apt-get install python3-venv
 ~~~
-- Instalar y Activar Ambiente Virtual (venv)
+- Instalar y Activar Ambiente Virtual en la carpeta Raíz (venv)
 ~~~
     - python3 -m venv venv
     - source venv/bin/activate
@@ -25,32 +25,6 @@ ___
     - psql --version
     - sudo passwd postgres
 ~~~
-___
-### Comandos Django
-- Iniciar Proyecto y Aplicaciones Django.
-~~~
-    - django-admin startproject webProject
-    - python3 manage.py startapp webProjectApp
-~~~
-- Correr Servidor Python
-~~~
-    - python3 manage.py runserver
-~~~
-- Crear SuperUsuario
-~~~
-    - python3 manage.py createsuperuser
-~~~
-- Hacer migraciones de modelos a base de datos
-~~~
-    - python3 manage.py makemigrations
-    - python3 manage.py sqlmigrate orders 0001 (por si aparece un error)
-    - python3 manage.py migrate
-~~~
-- Ingresar a la Shell
-~~~
-    - python3 manage.py shell
-~~~
-___
 ### Comandos PostgreSQL
 - Correr y Verificar Servicio PostgreSQL
 ~~~
@@ -64,6 +38,33 @@ ___
     - psql
     - alter user postgres password 'YourPassword';
     - CREATE DATABASE yourdatabase;
+    - (Tanto el usuario como la contraseña y la base de datos deben coincidir con los asignados en el archivo settings.py en la carpeta de webProject)
+    - Ctrl + D -> para salir de consola PostgreSql.
+~~~
+___
+### Comandos Django
+- Iniciar Proyecto y Aplicaciones Django.
+~~~
+    - django-admin startproject webProject
+    - python3 manage.py startapp webProjectApp
+~~~
+- Correr Servidor Python
+~~~
+    - python3 manage.py runserver
+~~~
+- Hacer migraciones de modelos a base de datos
+~~~
+    - python3 manage.py makemigrations
+    - python3 manage.py sqlmigrate orders 0001 (por si aparece un error)
+    - python3 manage.py migrate
+~~~
+- Crear SuperUsuario
+~~~
+    - python3 manage.py createsuperuser
+~~~
+- Ingresar a la Shell
+~~~
+    - python3 manage.py shell
 ~~~
 Citas:
 > Proyecto realizado con ayuda del Maestro Juan D. del canal Pildoras Informáticas: https://youtu.be/1DSi4in2VNA
